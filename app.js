@@ -5,8 +5,8 @@ const horoscope = [
         info: "Your best attributes are: Balance, Justice, Truth, Beauty, Perfection"
     },
     {
-        name:"aquarius",
-        image:"img/Aruarius.jpg",
+        name:"Aquarius",
+        image:"img/aquarius.jpg",
         info: "Your best attributes are: Knowledge, Humanitarian, Serious, Insightful, Duplicitous"
     },
     {
@@ -51,7 +51,7 @@ const horoscope = [
     },
     {
         name:"Saggittarius",
-        image:"img/Saggittarius.jpg",
+        image:"img/Sagittarius.jpg",
         info: "You are: Jovial, good-humored, honest, intellectual, and philosophical. Unfortunately, you are also: Blindly optimistic, careless, irresponsible, superficial, and tactless."
     },
     {
@@ -61,27 +61,28 @@ const horoscope = [
     },
 
 ];
-// console.log(horoscope[0].image);
-// document.write(horoscope[0].image);
-
-let inputs = document.getElementById("input").src = horoscope[i].image;
-    let txt1 = document.getElementById("names").src = horoscope[i].image;
-    let txt2 = document.getElementById("img").src = horoscope[i].image;
-    let txt3 = document.getElementById("infos").src = horoscope[i].image;
+// console.log(horoscope);
+let inputs = document.getElementById("input");
+   
+let txt1 = document.getElementById("names");
+let photo = document.getElementById("img");
+let txt2 = document.getElementById("infos");
+// console.log(photo);
 
 function searchFun(){
-
-
-
-    for(i=0; i<horoscope.length; i++){
-
+    console.log(inputs.value);
+  
+    for(i=0; i < horoscope.length; i++){
+    // console.log(horoscope[i].name);
+  
         if( inputs.value == horoscope[i].name){
-            txt1.innerText = txt1.innerText + " " + horoscope[i].name;
-            txt2.innerText = txt2.innerText + " " + horoscope[i].image;
-            txt3.innerText = txt3.innerText + " " + horoscope[i].info;
+            txt1.innerText = horoscope[i].name;
+            // photo.innerText = horoscope[i].image;
+                photo.src = horoscope[i].image;
+            txt2.innerText = horoscope[i].info;
 
-            }
-        }
-    }
+            };
+        };
+    };
 
 
